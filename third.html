@@ -1,26 +1,42 @@
-<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Get the current date</title>
-<script>
-    var curday = function(sp){
-today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth()+1;
-var yyyy = today.getFullYear();
+    <head>
+        <title>
+            day 2 assignemnt  third
+        </title>
+        <script>
+//There are six basic data types in JavaScript which can be divided into three main categories: primitive (or primary), composite (or reference), and special data types. String, Number, and Boolean are primitive data types.
+// Object, Array, and Function (which are all types of objects) are composite data types. 
+//primitive data type
+//1.number: A number data type can be an integer, a floating point value, an exponential value, a ‘NaN’ or a ‘Infinity’.
+var a=250; 
+var b=25.5;  
+var c = 10e4 
+//2. string : The string data type in JavaScript can be any group of characters enclosed by a single or double-quotes or by backticks.
+//var str1 = “This is a string1”;  // This is a string primitive type or string literal
+//var str2= ‘This is a string2’;
+var str3 = `This is a string3`;
+//3.Boolean: The boolean data type has only two values, true and false. It is mostly used to check a logical condition.
+typeof(true) // returns boolean
+typeof(false) // returns boolean
 
-if(dd<10) dd='0'+dd;
-if(mm<10) mm='0'+mm;
-return (mm+sp+dd+sp+yyyy);
-};
-document.writeln('Format 1:');
-document.writeln(curday('-'));
-document.writeln(', Format 2:');
-document.writeln(curday('/')); 
+// there are 4. null, 5.undefined.6.Symbol
 
-</script>
-</head>
-<body>
-</body>
+//NON PRIMITIVE DATA TYPES
+//1.object An object in JavaScript contains key-value pairs in its address.
+var obj1 = { a: 5, b: 6 };
+obj1[a] =7;
+console.log(obj1) ;
+//2.Array:An array in JavaScript is an object data type. An array contains more than one value with a numerical index.
+var arr1= [1, 2, 3];
+arr1[0] =4;
+console.log(arr1) // This will return the array [4, 2, 3]
+typeof (arr1) ;
+
+//Function:JavaScript doesn’t have a function data type but when we find the data type of a function using the typeof operator, we find that it returns a function. 
+function a(){ }
+typeof(a);
+
+        </script>
+    </head>
 </html>
+
